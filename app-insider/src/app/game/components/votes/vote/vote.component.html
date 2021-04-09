@@ -1,0 +1,15 @@
+<div (click)="voteClicked()" *ngIf="shouldShow" class="votes-container"
+    [ngClass]="{
+        'border': !isBorderHoverOnly,
+        'border-hover': isBorderHoverOnly,
+        'positive': borderColor === 'positive',
+        'negative': borderColor === 'negative',
+        'neutral': borderColor === 'neutral'
+    }">
+    <div class="emoji">
+        {{emoji}}
+    </div>
+    <div class="count">
+        {{count}}
+    </div>
+</div>

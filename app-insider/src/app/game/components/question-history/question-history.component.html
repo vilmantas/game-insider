@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="current-question" *ngIf="state.askedQuestion !== undefined">
+
+    </div>
+    <div class="history">
+        <table>
+            <tr class="question-container" *ngFor="let question of state.answeredQuestions">
+                <td class="answer">
+                    <app-answer [answer]="question.answer"></app-answer>
+                </td>
+                <td class="question">
+                    <app-question [question]="question"></app-question>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>

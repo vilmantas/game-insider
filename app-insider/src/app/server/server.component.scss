@@ -1,0 +1,25 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+h1 {
+    font-size: xx-large;
+}
+
+main {
+    margin: auto;
+    margin-top: 5rem;
+}
+
+input[type=text] {
+    border: none;
+    background: none;
+    border-bottom: 0.05rem solid whitesmoke;
+    outline: none;
+    font-size: xx-large;
+    text-align: center;
+    font-weight: bold;
+    color: whitesmoke;
+}

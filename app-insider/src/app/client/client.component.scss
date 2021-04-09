@@ -1,0 +1,14 @@
+:host {
+    position: relative;
+}
+
+main {
+    margin: auto;
+    margin-top: 5rem;
+
+    & section {
+        & div {
+            margin-bottom: 3rem;
+        }
+    }
+}

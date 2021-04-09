@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+
+  & table {
+    border-collapse: collapse;
+  }
+
+  & .answer {
+    text-align: right;
+  }
+
+  & .question {
+    text-align: left;
+    padding-left: 2rem
+  }
+}
+
+td {
+  font-size: 1.25rem;
+  padding: 0.75rem;
+}
+
+td:nth-child(2) {
+  border-left: 1px solid rgba(250, 250, 250, 0.651);
+}
+
+tr {
+  border-left: none;
+  border-right: none;
+}
+
+tr:first-child {
+  border-top: none;
+}
+
+tr:last-child {
+  border-bottom: none;
+}

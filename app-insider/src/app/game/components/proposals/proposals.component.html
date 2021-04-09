@@ -1,0 +1,5 @@
+<div class="container">
+    <div *ngFor="let proposal of proposals">
+        <app-proposal (onVoteClicked)="handleVoteEvent($event)" [proposal]="proposal"></app-proposal>
+    </div>
+</div>

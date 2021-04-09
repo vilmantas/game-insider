@@ -1,0 +1,8 @@
+<div class="container">
+    <div class="question">
+        {{question.question}} -{{question.source}}
+    </div>
+    <div *ngIf="question.votes" class="votes">
+        <app-votes [votes]="question.votes"></app-votes>
+    </div>
+</div>

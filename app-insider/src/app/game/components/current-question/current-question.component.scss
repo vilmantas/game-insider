@@ -1,0 +1,25 @@
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    
+    & div {
+        margin: auto;
+    }
+
+    & .answers {
+        display: flex;
+        flex-direction: row;
+
+        & .answer {
+            font-size: xx-large;
+            margin: 0rem 1rem;
+        }
+    }
+
+    & .question {
+        margin-bottom: 1rem;
+        font-size: xx-large;
+    }
+}

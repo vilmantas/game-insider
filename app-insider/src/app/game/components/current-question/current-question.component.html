@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="question">
+        {{state.question}}? —{{state.source}}
+    </div>
+    <div *ngIf="displayAnswers" class="answers">
+        <div class="answer">
+            <app-question-answer [emoji]="'✔️'" [tooltip]="'Yes'"></app-question-answer>
+        </div>
+        <div class="answer">
+            <app-question-answer [emoji]="'❌'" [tooltip]="'No'"></app-question-answer>
+        </div>
+        <div class="answer">
+            <app-question-answer [emoji]="'💀'" [tooltip]="'Wrong'"></app-question-answer>
+        </div>
+    </div>
+</div>

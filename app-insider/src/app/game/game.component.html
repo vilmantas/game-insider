@@ -1,0 +1,55 @@
+<main>
+    <section class="players-section">
+        <div>
+            <h1>Players</h1>
+        </div>
+        <div>
+            <app-player-list></app-player-list>
+        </div>
+    </section>
+    <section class="asked-question">
+        <div>
+            <h1>
+                Master is {{(questionsState.askedQuestion.question === '' ? 'waiting for question...' : 'answering')}} 
+            </h1>
+        </div>
+        <div *ngIf="questionsState.askedQuestion.question !== ''">
+            <app-current-question [state]="questionsState.askedQuestion"></app-current-question>
+        </div>
+    </section>
+    <section class="questions-section">
+        <div>
+            <h1>
+                Questions:
+            </h1>
+        </div>
+        <div>
+            <app-client-question-history [state]="questionsState"></app-client-question-history>
+        </div>
+    </section>
+    <section class="proposals-section">
+        <div>
+            <h1>
+                Proposed questions
+            </h1> 
+        </div>
+        <div>
+            <app-proposals (onProposalVoted)="handleProposalVote($event)" [proposals]="proposals"></app-proposals>
+        </div>
+    </section>
+    <section class="input-section">
+        <div>
+            <app-input></app-input>
+        </div>
+    </section>
+    <section class="info-section">
+        <div>
+            <h1>
+                Game status
+            </h1>
+        </div>
+        <div>
+            <app-status></app-status>
+        </div>
+    </section>
+</main>

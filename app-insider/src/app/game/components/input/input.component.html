@@ -1,0 +1,9 @@
+<div class="container">
+    <div class="input">
+        <input [(ngModel)]="proposalText" class="input-question" type="text" placeholder="Press here to type your question" />
+    </div>
+    <form name="proposal" (ngSubmit)="submitClick()" class="submit" [ngClass]="{ 'loading': state.loading }">
+        <div class="loader" *ngIf="state.loading"></div>
+        <input class="input-submit" type="submit" value="Submit"/>
+    </form>
+</div>

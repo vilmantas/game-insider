@@ -1,0 +1,51 @@
+.player {
+    display: flex;
+    flex-direction: row;
+    margin: 1rem;
+    border: 1px solid rgba(105, 98, 98, 0.281);
+    border-radius: 25px;
+    padding: 1rem;
+    transition: 0.2s;
+
+    > div {
+        width: 50%;
+        margin: auto;
+        justify-content: center;
+    }
+
+    border-radius: 20px;
+    box-shadow:
+    #0c6870 0px 0px 2px 2px, 
+    #04b9cacf -4px -4px 8px, 
+    #336b70 4px 4px 8px;
+    background-color: #323a320f;
+}
+
+.username {
+    display: inline-block;
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;   
+}
+
+.logo {
+    display: flex;
+    margin: auto;
+    border: 0.1rem solid rgba(237, 222, 164, 0.767);
+    color:  rgba(237, 222, 164, 0.767);
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+    font-size: 1.5rem;
+    filter: drop-shadow();
+
+    > div {
+        margin: auto;
+    }
+}

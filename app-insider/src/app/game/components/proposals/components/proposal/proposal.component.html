@@ -1,0 +1,20 @@
+<div class="proposal" [ngClass]="{ 'loading': proposal.isBeingVotedOn }">
+    <div class="loader" *ngIf="proposal.isBeingVotedOn"></div>
+    <div class="text">
+        "{{proposal.proposal.text}}"
+    </div>
+    <div class="source">
+        <span class="text">
+            — {{proposal.proposal.source}}
+        </span>
+    </div>
+    <div class="votes">
+        <div class="vote">
+            <app-vote [emoji]="'🙋'" [hideIfNoVotes]="false" [isBorderHoverOnly]="userVote === undefined || userVote.type !== VoteTypes.Yes" [borderColor]="'positive'" [count]="positiveVotes" (onVoteClicked)="voteClicked(VoteTypes.Yes)"></app-vote>
+        </div>
+        <div class="vote">
+            <app-vote [emoji]="'🙅‍♂️'" [hideIfNoVotes]="false" [isBorderHoverOnly]="userVote === undefined || userVote.type !== VoteTypes.No" [borderColor]="'negative'" [count]="negativeVotes" (onVoteClicked)="voteClicked(VoteTypes.No)"></app-vote>
+        </div>
+    </div>
+
+</div>

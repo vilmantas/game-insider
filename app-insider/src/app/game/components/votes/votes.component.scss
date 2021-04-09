@@ -1,0 +1,11 @@
+:host {
+  position: relative;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 65%;
+  left: 0;
+}

@@ -1,0 +1,33 @@
+<div class="container">
+    <section *ngIf="!connectionToHostAvailable">
+        <div>
+            <h1>
+                {{status}}
+            </h1>
+        </div>
+        <div>
+            <h1>
+                Room Code:
+            </h1>
+            <input type="text" value="" [(ngModel)]="room" />
+        </div>
+        <div>
+            <h1>
+                Username:
+            </h1>
+            <input type="text" value="Test username" [(ngModel)]="username" />
+        </div>
+    </section>
+    <section *ngIf="!connectionToHostAvailable">
+        <input type="button" value="Connect" (click)="setData()" />
+    </section>
+    <section *ngIf="connectionToHostAvailable">
+        <div>
+            <h1>
+                Players in lobby: {{players.length}}
+            </h1>
+            <h3 *ngFor="let player of players">{{player}}
+            </h3>
+        </div>
+    </section>
+</div>

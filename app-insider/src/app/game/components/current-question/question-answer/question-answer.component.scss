@@ -1,0 +1,36 @@
+.container {
+    position: relative;
+}
+
+.emoji-tooltip {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: medium;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: #323a322e;
+    padding: 0.5rem;
+    border: 1px solid;
+    border-color: #0c6870;
+    cursor: pointer;
+}
+
+.vote-emoji:hover {
+
+    user-select: none;
+    cursor: pointer;
+
+    > .emoji-tooltip {
+        visibility: visible;
+    }
+
+    > .emoji {
+        visibility: hidden;
+    }
+}
+
+.emoji:hover + span > {
+    visibility: visible;
+}
